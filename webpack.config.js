@@ -3,6 +3,7 @@ const HtmlPlugin = require('html-webpack-plugin');
 const path = require('path');
 
 module.exports = {
+    watch: true,
     devtool: 'eval',
     cache: true,
     entry: './index.js',
@@ -54,6 +55,6 @@ module.exports = {
         publicPath: '',
         contentBase: "dist",
         compress: true,
-        port: 8080
+        port: 3000
     }
 };
