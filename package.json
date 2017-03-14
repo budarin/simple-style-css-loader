@@ -1,0 +1,35 @@
+{
+  "name": "simple-style-css-loader",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "babel": "^6.23.0",
+    "babel-core": "^6.24.0",
+    "babel-loader": "^6.4.0",
+    "babel-preset-env": "^1.2.1",
+    "babel-preset-react": "^6.23.0",
+    "webpack-dev-server": "^2.4.1",
+    "css-loader": "^0.27.3",
+    "react": "^15.4.2",
+    "react-dom": "^15.4.2",
+    "style-loader": "^0.13.2",
+    "webpack": "^2.2.1"
+  },
+  "scripts": {
+    "start": "webpack-dev-server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/budarin/simple-style-css-loader.git"
+  },
+  "author": "Vadim Budarin",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/budarin/simple-style-css-loader/issues"
+  },
+  "homepage": "https://github.com/budarin/simple-style-css-loader#readme",
+  "devDependencies": {
+    "html-webpack-plugin": "^2.28.0"
+  }
+}
