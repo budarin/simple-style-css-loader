@@ -26,7 +26,7 @@ const styled = styles => TargetComponent => {
     };
 
     return function StyledComponent(props) {
-        return <TargetComponent {...props} classes={styles.locals} />;
+        return <TargetComponent {...props} classeNames={styles.locals} />;
     };
 };
 

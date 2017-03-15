@@ -8,7 +8,7 @@ class App extends React.Component {
     render() {
         return (<div>
             <Header />
-            <div className={this.props.classes.app} >
+            <div className={this.props.classeNames.app} >
                 Application text
             </div>
         </div>);

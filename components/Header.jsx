@@ -5,7 +5,7 @@ import styles from './Header.css';
 
 class Header extends React.Component {
     render() {
-        return <div className={this.props.classes.header} >
+        return <div className={this.props.classeNames.header} >
             Simple Header
         </div>;
     }
