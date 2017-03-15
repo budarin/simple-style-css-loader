@@ -3,6 +3,7 @@ import React from 'react';
 import styled from './utils/styled';
 import styles from './Header.css';
 
+@styled(styles)
 class Header extends React.Component {
     render() {
         const { classeNames: { header } } = this.props;
@@ -13,4 +14,4 @@ class Header extends React.Component {
     }
 }
 
-export default styled(styles)(Header);
+export default Header;
