@@ -13,7 +13,6 @@
     "css-loader": "^0.27.3",
     "react": "^15.4.2",
     "react-dom": "^15.4.2",
-    "style-loader": "^0.13.2",
     "webpack": "^2.2.1"
   },
   "scripts": {
@@ -30,6 +29,7 @@
   },
   "homepage": "https://github.com/budarin/simple-style-css-loader#readme",
   "devDependencies": {
-    "html-webpack-plugin": "^2.28.0"
+    "html-webpack-plugin": "^2.28.0",
+    "style-loader": "github:webpack-contrib/style-loader"
   }
 }
