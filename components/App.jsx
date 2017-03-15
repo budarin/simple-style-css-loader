@@ -24,9 +24,11 @@ class App extends React.Component {
     }
 
     render() {
+        const { classeNames: { app } } = this.props;
+
         return (<div>
             {this.state.showHeader && <Header />}
-            <div className={this.props.classeNames.app} >
+            <div className={app} >
                 Application text
             </div>
         </div>);

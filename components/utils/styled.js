@@ -12,16 +12,21 @@ const styled = styles => TargetComponent => {
         if (this.count === 1) {
             styles.use();
         }
+
         if (componentWillMountOriginal) {
             componentWillMountOriginal.call(this);
         }
     };
 
     TargetComponent.prototype.componentWillUnmount = function componentWillUnmount() {
-        styles.unuse();
-        this.count = 0;
         if (componentWillUnmountOriginal) {
             componentWillUnmountOriginal.call(this);
+        }
+
+        // очищать stylesheet при удалении компонента из дерева если выставлен флаг
+        if (global.cleanUpStylesheet || this.cleanUpStylesheet) {
+            styles.unuse();
+            this.count = 0;
         }
     };
 
