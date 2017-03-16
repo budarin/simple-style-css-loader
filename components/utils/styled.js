@@ -24,14 +24,14 @@ const styled = styles => TargetComponent => {
         }
 
         // очищать stylesheet при удалении компонента из дерева если выставлен флаг
-        if (global.cleanUpStylesheet || this.cleanUpStylesheet) {
+        if (global.cleanUpStylesOnUnmount || this.cleanUpStylesOnUnmount) {
             styles.unuse();
             this.count = 0;
         }
     };
 
     return function StyledComponent(props) {
-        return <TargetComponent {...props} classeNames={styles.locals} />;
+        return <TargetComponent {...props} styles={styles.locals} />;
     };
 };
 
