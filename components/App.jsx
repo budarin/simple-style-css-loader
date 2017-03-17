@@ -5,6 +5,10 @@ import styles from './App.css';
 import Header from './Header.jsx';
 
 class App extends React.Component {
+    static propTypes = {
+        componentStyles: React.PropTypes.object
+    };
+
     componentWillMount() {
         this.setState({
             showHeader: true
@@ -24,12 +28,19 @@ class App extends React.Component {
     }
 
     render() {
-        const { styles: { app } } = this.props;
+        const { componentStyles: { app } } = this.props;
+
+        // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/toLocaleString
+        const value = (150).toLocaleString('ru-RU', {
+            style: 'currency',
+            currency: 'UAH',
+            maximumFractionDigits: 2,
+        });
 
         return (<div>
             {this.state.showHeader && <Header />}
             <div className={app} >
-                Application text
+                Application text costs {value}
             </div>
         </div>);
     }

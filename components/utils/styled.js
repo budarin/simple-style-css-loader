@@ -31,7 +31,7 @@ const styled = styles => TargetComponent => {
     };
 
     return function StyledComponent(props) {
-        return <TargetComponent {...props} styles={styles.locals} />;
+        return <TargetComponent {...props} componentStyles={styles.locals} />;
     };
 };
 
